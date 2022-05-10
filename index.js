@@ -1423,8 +1423,8 @@ element.style.color = "gray";*/
 // .addEventListener(event, function, useCapture)
 // You can add many event handlers to one element.
 // Even the same that invokes different functions
-const innerDiv = document.getElementById("innerDiv");
-const outerDiv = document.getElementById("outerDiv");
+//const innerDiv = document.getElementById("innerDiv");
+//const outerDiv = document.getElementById("outerDiv");
 //innerDiv.addEventListener("mouseover", changeRed);
 //innerDiv.addEventListener("mouseout", changeBlue);
 
@@ -1454,28 +1454,426 @@ const outerDiv = document.getElementById("outerDiv");
 //         myImg.style.display = "none";
 //     }
 // })
-const myDiv = document.getElementById("myDiv");
-window.addEventListener("keydown", move);
-let x = 0;
-let y = 0;
+// const myDiv = document.getElementById("myDiv");
+// window.addEventListener("keydown", move);
+// let x = 0;
+// let y = 0;
 
-function move(event) {
-    switch (event.key) {
-        case "ArrowDown":
-            y += 5;
-            myDiv.style.top = y + "px";
+// function move(event) {
+//     switch (event.key) {
+//         case "ArrowDown":
+//             y += 5;
+//             myDiv.style.top = y + "px";
+//             break;
+//         case "ArrowUp":
+//             y -= 5;
+//             myDiv.style.top = y + "px";
+//             break;
+//         case "ArrowRight":
+//             x += 5;
+//             myDiv.style.left = x + "px";
+//             break;
+//         case "ArrowLeft":
+//             x -= 5;
+//             myDiv.style.left = x + "px";
+//             break;
+//     }
+// }
+
+// const myButton = document.getElementById("myButton");
+// const animation = document.getElementById("myDiv");
+// myButton.addEventListener("click", begin);
+
+// function begin() {
+//     let timerId = null;
+//     let scaleX = 1;
+//     let scaleY = 1;
+// let x = 0;
+// let y = 0;
+// timerId = setInterval(frame, 5);
+// let degrees = 0;
+// function frame() {
+//     if (y >= 200 || x >= 200) {
+//         clearInterval(timerId);
+//     } else {
+//         y += 1;
+//         x += 1;
+//         animation.style.top = y + "px";
+//         animation.style.left = x + "px";
+//     }
+// }// this function makes the div move digonally.
+
+
+// function frame() {
+//     if (x >= 200 || y >= 200) {
+//         clearInterval(timerId)
+//     } else {
+//         degrees += 5;
+//         x += 2;
+//         y += 2;
+//         animation.style.left = x + "px";
+//         animation.style.top = y + "px";
+//         animation.style.transform = "rotateZ(" + degrees + "deg)"
+//     }
+//     function frame() {
+//         if (scaleX >= 2 || scaleY >= 2) {
+//             clearInterval(timerId)
+//         } else {
+//             scaleX += 0.01;
+//             scaleY += 0.01;
+//             animation.style.transform = "scale(" +
+//                 scaleX + "," +
+//                 scaleY + ")";
+//         }
+
+//     }
+// }
+
+
+// Canvas API= a means for drawing graphics
+// use for animations, games, data visualization
+
+
+//let canvas = document.getElementById("myCanvas");
+//let context = canvas.getContext("2d");
+
+//how to draw line on the canvas
+// context.strokeStyle = "green";
+// context.lineWidth = 10;
+// context.beginPath();
+// context.moveTo(0, 0);
+// context.lineTo(250, 250);
+// context.lineTo(250, 500);
+// context.moveTo(500, 0);
+// context.lineTo(250, 250);
+// context.stroke();
+
+//Draw Triangle
+// context.strokeStyle = "green";
+// context.fillStyle = "red";
+// context.lineWidth = 10;
+// context.beginPath();
+// context.moveTo(250, 0);
+// context.lineTo(0, 250);
+// context.lineTo(500, 250);
+// context.lineTo(250, 0);
+// context.stroke();
+// context.fill();
+
+// Draw  Rectangles
+/*context.lineWidth = "2";
+context.fillStyle = "green";
+context.fillRect(0, 0, 250, 250);
+context.strokeStyle = "yellow";
+context.strokeRect(0, 0, 250, 250);
+
+
+context.lineWidth = "2";
+context.fillStyle = "orange";
+context.fillRect(0, 250, 250, 250);
+context.strokeStyle = "yellow";
+context.strokeRect(0, 250, 250, 250);
+
+context.lineWidth = "2";
+context.fillStyle = "purple";
+context.fillRect(250, 250, 250, 250);
+context.strokeStyle = "yellow";
+context.strokeRect(250, 250, 250, 250);
+
+
+context.lineWidth = "2";
+context.fillStyle = "blue";
+context.fillRect(250, 0, 250, 250);
+context.strokeStyle = "yellow";
+context.strokeRect(250, 0, 250, 250);*/
+
+// Draw Circle
+// (x,y, r sAngle, eAngle, counterclockwise);
+/*context.fillStyle = "orange";
+context.lineWidth = 10;
+context.strokeStyle = "darkblue";
+context.beginPath();
+context.arc(250, 250, 200, 0, 2 * Math.PI);
+context.stroke();
+context.fill();*/
+
+// Draw Text
+/*context.font = "50px MV Boli";
+context.fillStyle = "Brown";
+context.textAlign = "center"
+context.fillText("YOU WIN!", canvas.width / 2, canvas.height / 2);*/
+
+// window= interface used to talk to the web 
+// the DOM is  a property of the window
+
+//console.dir(window);
+
+//console.log(window.outerWidth);
+//console.log(window.outerHeight);
+//console.log(window.scrollX);
+//console.log(window.scrollY);
+
+//console.log(window.location.href);
+//window.location.href = "https://google.com";
+//console.log(window.location.hostname);
+//console.log(window.location.pathname);
+
+//const myButton = document.querySelector("#myButton");
+//myButton.addEventListener("click", () => window.open("tboy.belekollie@facebook.com"));
+//myButton.addEventListener("click", () => window.close("tboy.belekollie@facebook.com"));
+//myButton.addEventListener("click", () => window.print());
+//window.alert("hello");
+//window.confirm("Press ok to continue");
+//let age = window.prompt("Enter your age");
+//if (age <= 18) {
+//  window.alert("You must be 18+ to visit this site");
+//} else {
+//window.alert("You can access the site because you are an adult");
+//}
+
+// cookie= a small text file stored on your computer use
+// to remember information about the user
+// saved in name =value pairs
+//console.log(navigator.cookieEnabled);
+//document.cookie = "firstName=SpongeBob; expires=Sun, 1 January 2030 12:00:00 UTC; path=/";
+//console.log(document.cookie);
+//deleteCookie("email");
+//deleteCookie("firstName");
+//deleteCookie("lastName");
+//setCookie("email", "belekollie@gmail.com", 365);
+//console.log(document.cookie);
+
+// const firstText = document.querySelector("#firstText");
+// const lastText = document.querySelector("#lastText");
+// const submitBtn = document.querySelector("#submitBtn");
+// const cookieBtn = document.querySelector("#cookiesBtn");
+// submitBtn.addEventListener("click", () => {
+//     setCookie("firstName", firstText.value, 365);
+//     setCookie("lastName", lastText.value, 365);
+// });
+// deleteCookie("firstName");
+// deleteCookie("lastName");
+
+// cookieBtn.addEventListener("click", () => {
+//     firstText.value = getCookie("firstName");
+//     lastText.value = getCookie("lastName");
+// });
+
+
+
+// setCookie("firstName", "John", 365);
+// setCookie("lastName", "SquarePants", 365);
+// console.log(getCookie("firstName"));
+// console.log(getCookie("lastName"));
+
+// function setCookie(name, value, daysToLive) {
+//     const date = new Date();
+//     date.setTime(date.getTime() + daysToLive * 24 * 60 * 60 * 1000);
+//     let expires = "expires=" + date.toUTCString();
+//     document.cookie = `${name}=${value};${expires};path=/`;
+
+// }
+
+// function deleteCookie(name) {
+//     setCookie(name, null, null);
+// }
+
+// function getCookie(name) {
+//     const cDecoded = decodeURIComponent(document.cookie);
+//     console.log(cDecoded);
+//     const cArray = cDecoded.split("; ");
+//     //console.log(cArray);
+//     let result = null;
+//     cArray.forEach(element => {
+//         if (element.indexOf(name) == 0) {
+//             result = element.substring(name.length + 1);
+
+//         }
+//     })
+//     return result;
+// }
+
+// const timeDisplay = document.querySelector("#timeDisplay");
+// const startBtn = document.querySelector("#startBtn");
+// const pauseBtn = document.querySelector("#pauseBtn");
+// const resetBtn = document.querySelector("#resetBtn");
+
+// let startTime = 0;
+// let elapsedTime = 0;
+// let currentTime = 0;
+// let paused = true;
+// let intervalId;
+// let hrs = 0;
+// let mins = 0;
+// let secs = 0;
+
+// startBtn.addEventListener("click", () => {
+//     if (paused) {
+//         paused = false;
+//         startTime = Date.now() - elapsedTime;
+//         intervalId = setInterval(updateTime, 1000);
+//     }
+
+// });
+// pauseBtn.addEventListener("click", () => {
+//     if (!paused) {
+//         paused = true;
+//         elapsedTime = Date.now() - startTime;
+//         clearInterval(intervalId);
+//     }
+// });
+// resetBtn.addEventListener("click", () => {
+
+//     paused = true;
+//     clearInterval(intervalId);
+//     startTime = 0;
+//     elapsedTime = 0;
+//     currentTime = 0;
+//     hrs = 0;
+//     mins = 0;
+//     secs = 0;
+//     timeDisplay.textContent = "00:00:00";
+// });
+
+// function updateTime() {
+//     elapsedTime = Date.now() - startTime;
+//     secs = Math.floor((elapsedTime / 1000) % 60);
+//     mins = Math.floor((elapsedTime / (1000 * 60)) % 60);
+//     hrs = Math.floor((elapsedTime / (1000 * 60 * 60)) % 60)
+
+//     secs = pad(secs);
+//     mins = pad(mins);
+//     hrs = pad(hrs);
+//     timeDisplay.textContent = `${hrs}:${mins}:${secs}`;
+
+//     function pad(unit) {
+//         return (("0") + unit).length > 2 ? unit : "0" + unit;
+//     }
+// }
+
+
+/*const playerText = document.querySelector("#playerText");
+const computerText = document.querySelector("#computerText");
+const resultText = document.querySelector("#resultText");
+const choiceBtns = document.querySelector(".choiceBtn");
+let player;
+let computer;
+let result;
+
+
+choiceBtns.forEach(button => button.addEventListener("click", () => {
+
+    player = button.textContent;
+    computerTurn();
+    playerText.textContent = `Player:${player}`;
+    computerText.textContent = `computer:${computer}`;
+    resultText.textContent = checkWinner();
+
+}));
+
+function computerTurn() {
+    const randNum = Math.floor(Math.random() * 3) + 1;
+
+    switch (randNum) {
+        case 1:
+            computer = "ROCK";
             break;
-        case "ArrowUp":
-            y -= 5;
-            myDiv.style.top = y + "px";
+
+        case 2:
+            computer = "PAPER";
             break;
-        case "ArrowRight":
-            x += 5;
-            myDiv.style.left = x + "px";
-            break;
-        case "ArrowLeft":
-            x -= 5;
-            myDiv.style.left = x + "px";
+
+        case 3:
+            computer = "SCISSORS";
             break;
     }
 }
+
+function checkWinner() {
+    if (player == computer) {
+        return "Draw!";
+    } else if (computer == "ROCK") {
+        return (player == "PAPER") ? "You Win!" : "You loss";
+    } else if (computer == "PAPER") {
+        return (player == "SCISSORS") ? "You Win!" : "You loss";
+    } else if (computer == "SCISSORS") {
+        return (player == "ROCK") ? "You Win!" : "You loss";
+    }
+}*/
+
+const cells = document.querySelectorAll(".cell");
+const statusText = document.querySelector("#statusText");
+const restartBtn = document.querySelector("#restartBtn");
+const winConditions = [
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6],
+];
+let options = ["", "", "", "", "", "", "", "", "", ];
+let currentPlayer = "X";
+let running = false;
+initializeGame();
+
+
+function initializeGame() {
+    cells.forEach(cell => cell.addEventListener("click", cellClicked))
+    restartBtn.addEventListener("click", restartGame);
+    statusText.textContent = `${currentPlayer}'s your turn`;
+    running = true;
+}
+
+function cellClicked() {
+    const cellIndex = this.getAttribute("cellIndex");
+    if (options[cellIndex] != "" || !running) {
+        return;
+    }
+    updateCell(this, cellIndex);
+    changePlayer();
+    // checkWinner();
+
+}
+
+function updateCell(cell, index) {
+    options[index] = currentPlayer;
+    cell.textContent = currentPlayer;
+}
+
+function changePlayer() {
+    currentPlayer = (currentPlayer == "X") ? "O" : "X";
+    statusText.textContent = `${currentPlayer}'s your turn`;
+}
+
+
+function checkWinner() {
+    let roundWon = false;
+    for (let i = 0; i < winConditions.length; i += 1) {
+        const condition = winConditions[i];
+        const cellA = options[condition[0]];
+        const cellB = options[condition[1]];
+        const cellC = options[condition[2]];
+        if (cellA == "" || cellB == "" || cellC == "") {
+            continue;
+        }
+        if (cellA == cellB && cellB == cellC) {
+            roundWon = true;
+            break;
+        }
+    }
+    if (roundWon) {
+        statusText.textContent = `${currentPlayer} Wins!`;
+        running = false;
+    } else if (!options.includes("")) {
+        statusText.textContent = `Draw`;
+        running = false;
+
+    } else {
+        changePlayer();
+    }
+}
+
+function restartGame() {}
